@@ -4,7 +4,7 @@
 #
 Name     : R-sets
 Version  : 1.0.18
-Release  : 4
+Release  : 5
 URL      : https://cran.r-project.org/src/contrib/sets_1.0-18.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/sets_1.0-18.tar.gz
 Summary  : Sets, Generalized Sets, Customizable Sets and Intervals
@@ -29,21 +29,22 @@ lib components for the R-sets package.
 
 %prep
 %setup -q -c -n sets
+cd %{_builddir}/sets
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1572376803
+export SOURCE_DATE_EPOCH=1589576092
 
 %install
-export SOURCE_DATE_EPOCH=1572376803
+export SOURCE_DATE_EPOCH=1589576092
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
