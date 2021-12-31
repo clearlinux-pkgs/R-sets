@@ -4,7 +4,7 @@
 #
 Name     : R-sets
 Version  : 1.0.20
-Release  : 18
+Release  : 19
 URL      : https://cran.r-project.org/src/contrib/sets_1.0-20.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/sets_1.0-20.tar.gz
 Summary  : Sets, Generalized Sets, Customizable Sets and Intervals
