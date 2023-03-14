@@ -4,7 +4,7 @@
 #
 Name     : R-sets
 Version  : 1.0.24
-Release  : 29
+Release  : 30
 URL      : https://cran.r-project.org/src/contrib/sets_1.0-24.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/sets_1.0-24.tar.gz
 Summary  : Sets, Generalized Sets, Customizable Sets and Intervals
@@ -13,9 +13,6 @@ License  : GPL-2.0
 Requires: R-sets-lib = %{version}-%{release}
 BuildRequires : R-proxy
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 generalizations such as fuzzy sets, multisets, and
@@ -38,10 +35,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1678204060
+export SOURCE_DATE_EPOCH=1678833122
 
 %install
-export SOURCE_DATE_EPOCH=1678204060
+export SOURCE_DATE_EPOCH=1678833122
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
